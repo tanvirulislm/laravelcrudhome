@@ -15,6 +15,7 @@ class FormController extends Controller
             'email' => 'required|email|unique:students',
             'phone' => 'required',
             'address' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ],
         [
             // Custom Message for All Fields
@@ -27,7 +28,7 @@ class FormController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'address' => $request->address,
-            'image' => $request->image
+            'image' => time().'.'.$request->image->extension()
         ]);
         return redirect('/add_student')->with('success', 'Student added successfully');
 

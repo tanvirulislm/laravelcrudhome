@@ -6,15 +6,12 @@
           <div class="col-lg-12 mx-auto">
             <div class="card z-index-0 fadeIn3 fadeInBottom">
               <div class="card-body">
-                <h3 class="text-center">Add Student</h3>
+                <h3 class="text-center">Edit Data</h3>
                 <form role="form" class="text-start" action="{{route('submit_form')}}" method="post" enctype="multipart/form-data">
                   @csrf
-                  @if($errors->any())
-                  <div class="alert alert-danger text-white">{{$errors->first()}}</div>
-                  @endif
                   <div class="input-group input-group-outline my-3">
                     <label class="form-label">Name</label>
-                    <input type="name" class="form-control" name="name">
+                    <input type="name" class="form-control" name="name" >
                   </div>
                   <div class="input-group input-group-outline my-3">
                     <label class="form-label">Class</label>
@@ -36,7 +33,7 @@
                     <input type="file" class="form-control" name="image">
                   </div>
                   <div class="text-center">
-                    <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2 btn-lg">Add Student</button>
+                    <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2 btn-lg">Edit Data</button>
                   </div>
                 </form>
               </div>
@@ -45,10 +42,10 @@
         </div>
       </div>
 
-      @if(session('success'))
+    @if(session('success'))
     <script>
         alert("{{ session('success') }}");
     </script>
-@endif
+    @endif
 
 @endsection

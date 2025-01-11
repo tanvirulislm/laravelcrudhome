@@ -98,15 +98,16 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach ($students as $student)
                                             <tr>
-                                            <td
-                                                    class="align-middle text-start ps-4"
-                                                >
-                                                    <span
-                                                        class="text-xs font-weight-bold"
-                                                    >
-                                                       01
+                                            <td class="align-middle text-start ps-4">
+                                                    <span class="text-xs font-weight-bold">
+                                                        {{$student->id}}
                                                     </span>
+                                            </td>
+                                            <td class="align-middle ps-4">
+                                                    <span class="text-xs font-weight-bold">
+                                                       {{$student->name}}</span>
                                                 </td>
                                                 <td
                                                     class="align-middle ps-4"
@@ -114,16 +115,7 @@
                                                     <span
                                                         class="text-xs font-weight-bold"
                                                     >
-                                                       Tanvrin Toma
-                                                    </span>
-                                                </td>
-                                                <td
-                                                    class="align-middle ps-4"
-                                                >
-                                                    <span
-                                                        class="text-xs font-weight-bold"
-                                                    >
-                                                       hello@gafa.com
+                                                         {{$student->email}}
                                                     </span>
                                                 </td>                                          
                                                 
@@ -133,7 +125,7 @@
                                                     <span
                                                         class="text-xs font-weight-bold"
                                                     >
-                                                       0123456789
+                                                        {{$student->phone}}
                                                     </span>
                                                 </td>
                                                 <td
@@ -142,17 +134,19 @@
                                                     <span
                                                         class="text-xs font-weight-bold"
                                                     >
-                                                       Dhaka, Bangladesh
+                                                        {{$student->address}}
                                                     </span>
                                                 </td>
                                                 <td class="align-middle ps-4">
                                                     <div class="button">
-                                                        <button class="btn btn-success">View</button>
-                                                        <button class="btn btn-info">Edit</button>
-                                                        <button class="btn btn-danger">Delete</button>
+                                                        <a href="" class="btn btn-success">View</a>
+                                                        <a href="{{route("edit", $student->id)}}" class="btn btn-info">Edit</a>
+                                                        <a href="" class="btn btn-danger">Delete</a>
                                                     </div>
                                                 </td>
                                             </tr>
+                                            @endforeach
+                                            
                                             
                                         </tbody>
                                     </table>

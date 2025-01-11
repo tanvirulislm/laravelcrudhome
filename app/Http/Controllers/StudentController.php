@@ -15,7 +15,5 @@ class StudentController extends Controller
         return view("profile");
     }
 
-    function edit(){
-        return view("edit");
-    }
+   
 }

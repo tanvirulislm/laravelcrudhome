@@ -8,7 +8,7 @@
                     <div class="ms-3">
                         <h3 class="mb-0 h4 font-weight-bolder">Dashboard</h3>
                         <p class="mb-4">
-                            Check the sales, value and bounce rate by country.
+                            This is student management system dashboard
                         </p>
                     </div>
                     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
@@ -19,7 +19,7 @@
                                         <p class="text-sm mb-0 text-capitalize">
                                             Total Student
                                         </p>
-                                        <h4 class="mb-0">$53k</h4>
+                                        <h4 class="mb-0">{{ $totalUsers }}</h4>
                                     </div>
                                     <div
                                         class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg"
@@ -34,10 +34,7 @@
                             <hr class="dark horizontal my-0" />
                             <div class="card-footer p-2 ps-3">
                                 <p class="mb-0 text-sm">
-                                    <span
-                                        class="text-success font-weight-bolder"
-                                        >+55% </span
-                                    >than last week
+                                    <span class="text-success font-weight-bolder">All </span> are present
                                 </p>
                             </div>
                         </div>
@@ -50,14 +47,14 @@
                             <div class="card-header pb-0">
                                 <div class="row">
                                     <div class="col-lg-6 col-7">
-                                        <h6>Projects</h6>
+                                        <h6>Students</h6>
                                         <p class="text-sm mb-0">
                                             <i
                                                 class="fa fa-check text-info"
                                                 aria-hidden="true"
                                             ></i>
                                             <span class="font-weight-bold ms-1"
-                                                >30 done</span
+                                                >{{$totalUsers}} are present in </span
                                             >
                                             this month
                                         </p>

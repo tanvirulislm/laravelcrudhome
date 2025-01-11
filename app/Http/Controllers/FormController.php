@@ -33,4 +33,7 @@ class FormController extends Controller
         return redirect('/add_student')->with('success', 'Student added successfully');
 
     }
+    function edit(){
+        return view("edit");
+    }
 }

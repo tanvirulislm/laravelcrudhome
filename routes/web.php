@@ -15,4 +15,5 @@ Route::get('/add_student', [StudentController::class,'add_student']);
 Route::get('/profile', [StudentController::class,'profile']);
 Route::post('/store', [FormController::class, 'store'])->name('submit_form');
 Route::get('/edit/{id}', [FormController::class, 'edit'])->name('edit');
-Route::get('/delete/{id}', [StudentController::class, 'delete']);
+Route::post('/update/{id}', [FormController::class, 'update'])->name('update');
+Route::get('/delete/{id}', [StudentController::class, 'delete'])->name('delete');

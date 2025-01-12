@@ -15,5 +15,11 @@ class StudentController extends Controller
         return view("profile");
     }
 
+    function delete($id){
+        $student = Student::findOrFail($id);
+        $student->delete();
+        return redirect('/')->with('success', 'Student deleted successfully');
+    }
+
    
 }

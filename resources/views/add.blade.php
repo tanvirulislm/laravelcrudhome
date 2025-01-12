@@ -14,23 +14,23 @@
                   @endif
                   <div class="input-group input-group-outline my-3">
                     <label class="form-label">Name</label>
-                    <input type="name" class="form-control" name="name">
+                    <input type="name" class="form-control" name="name" value="{{old('name')}}">
                   </div>
                   <div class="input-group input-group-outline my-3">
                     <label class="form-label">Class</label>
-                    <input type="name" class="form-control" name="class_name">
+                    <input type="name" class="form-control" name="class_name" value="{{old('class_name')}}">
                   </div>
                   <div class="input-group input-group-outline mb-3">
                     <label class="form-label">Email</label>
-                    <input type="email" class="form-control" name="email">
+                    <input type="email" class="form-control" name="email" value="{{old('email')}}">
                   </div>
                   <div class="input-group input-group-outline mb-3">
                     <label class="form-label">Phone</label>
-                    <input type="phone" class="form-control" name="phone">
+                    <input type="phone" class="form-control" name="phone" value="{{old('phone')}}">
                   </div>
                   <div class="input-group input-group-outline mb-3">
                     <label class="form-label">Address</label>
-                    <input type="text" class="form-control" name="address">
+                    <input type="text" class="form-control" name="address" value="{{old('address')}}">
                   </div>
                   <div class="input-group input-group-outline mb-3">
                     <input type="file" class="form-control" name="image">

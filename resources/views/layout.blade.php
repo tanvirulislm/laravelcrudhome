@@ -9,9 +9,9 @@
     <link
       rel="apple-touch-icon"
       sizes="76x76"
-      href="assets/img/apple-icon.png"
+      href="{{asset("assets/img/apple-icon.png")}}"
     />
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon.png')}}" />
     <title>Practice Dashboard</title>
     <!--     Fonts and icons     -->
     <link
@@ -20,8 +20,8 @@
       href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900"
     />
     <!-- Nucleo Icons -->
-    <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="{{asset('assets/css/nucleo-icons.css')}}" rel="stylesheet" />
+    <link href="{{asset('assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <script
       src="https://kit.fontawesome.com/42d5adcbca.js"
@@ -35,7 +35,7 @@
     <!-- CSS Files -->
     <link
       id="pagestyle"
-      href="assets/css/material-dashboard.css"
+      href="{{asset('assets/css/material-dashboard.css')}}"
       rel="stylesheet"
     />
   </head>
@@ -57,7 +57,7 @@
           target="_blank"
         >
           <img
-            src="assets/img/logo-ct-dark.png"
+            src="{{asset('assets/img/logo-ct-dark.png')}}"
             class="navbar-brand-img"
             width="26"
             height="26"
@@ -154,7 +154,7 @@
                 <a
                   class="btn btn-outline-primary btn-sm mb-0 me-3"
                   target="_blank"
-                  href="https://www.creative-tim.com/builder?ref=navbar-material-dashboard"
+                  href="#"
                   >Online Builder</a
                 >
               </li>
@@ -357,11 +357,11 @@
             </div>
         </div>
         <!--   Core JS Files   -->
-        <script src="assets/js/core/popper.min.js"></script>
-        <script src="assets/js/core/bootstrap.min.js"></script>
-        <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
-        <script src="assets/js/plugins/smooth-scrollbar.min.js"></script>
-        <script src="assets/js/plugins/chartjs.min.js"></script>
+        <script src="{{asset("assets/js/core/popper.min.js")}}"></script>
+        <script src="{{asset("assets/js/core/bootstrap.min.js")}}"></script>
+        <script src="{{asset("assets/js/plugins/perfect-scrollbar.min.js")}}"></script>
+        <script src="{{asset("assets/js/plugins/smooth-scrollbar.min.js")}}"></script>
+        <script src="{{asset("assets/js/plugins/chartjs.min.js")}}"></script>
         <script>
             var ctx = document.getElementById("chart-bars").getContext("2d");
 
@@ -654,7 +654,7 @@
         <!-- Github buttons -->
         <script async defer src="https://buttons.github.io/buttons.js"></script>
         <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-        <script src="assets/js/material-dashboard.min.js?v=3.2.0"></script>
+        <script src="{{asset("assets/js/material-dashboard.min.js?v=3.2.0")}}"></script>
     </body>
 </html>
 

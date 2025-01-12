@@ -7,8 +7,8 @@
                 <div class="row">
                     <div class="ms-3">
                         <h3 class="mb-0 h4 font-weight-bolder">Dashboard</h3>
-                        <p class="mb-4">
-                            This is student management system dashboard
+                        <p class="mb-4 text-success">
+                        {{ session('success') }}
                         </p>
                     </div>
                     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
@@ -72,6 +72,8 @@
                                                     Serial No</th>
                                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                                     Name</th>
+                                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    Class</th>
                                                 <th
                                                     class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                                 >
@@ -99,12 +101,16 @@
                                             <tr>
                                             <td class="align-middle text-start ps-4">
                                                     <span class="text-xs font-weight-bold">
-                                                        {{$student->id}}
+                                                        {{$loop->iteration}}
                                                     </span>
                                             </td>
                                             <td class="align-middle ps-4">
                                                     <span class="text-xs font-weight-bold">
                                                        {{$student->name}}</span>
+                                                </td>
+                                            <td class="align-middle ps-4">
+                                                    <span class="text-xs font-weight-bold">
+                                                       {{$student->class_name}}</span>
                                                 </td>
                                                 <td
                                                     class="align-middle ps-4"
@@ -138,7 +144,7 @@
                                                     <div class="button">
                                                         <a href="" class="btn btn-success">View</a>
                                                         <a href="{{route("edit", $student->id)}}" class="btn btn-info">Edit</a>
-                                                        <a href="" class="btn btn-danger">Delete</a>
+                                                        <a href="{{route("delete", $student->id)}}" class="btn btn-danger">Delete</a>
                                                     </div>
                                                 </td>
                                             </tr>
